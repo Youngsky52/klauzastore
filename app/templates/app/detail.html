@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+    <title>info</title>
+
+
+
+
+
+{% block content %}
+
+<br>
+
+<center>
+    <a href="{% url 'index'  %}">retour</a>
+<h2>details </h2>
+
+<img src="{{inf.image.url}}" alt="{{inf.name}}">
+<H1>{{inf.name}}</H1>
+<h3>Stock: ({{inf.quantity}})</h3>
+<p>{{inf.about}}</p>
+<p>{{inf.price}} $</p>
+</center>
+{% endblock %}

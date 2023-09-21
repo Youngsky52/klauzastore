@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <style>
+
+    </style>
+    <meta charset="UTF-8">
+    <title>home</title>
+</head>
+<body onload="loa()">
+<div id="loading"> </div>
+<header>
+<nav>
+<ul style="list-style:none;">
+
+    <li><a href="#">about</a></li>
+    <li><a href="#">baskette</a></li>
+    <li><a href="/">home</a></li>
+
+
+    {% if user.is_authenticated %}
+       <h2> {{ user.username }}
+       </h2>
+    <a href="{% url 'logout' %}">Logout</a>
+    {% else %}
+    <a style="text-decoration:none; color:red;" href="{% url 'login' %}"> connexion </a>
+    <br>
+    <a style="text-decoration:none; color:red;" href="{% url 'signup' %}"> s'inscrire </a>
+    {% endif %}
+</ul>
+    </nav>
+    </header>
+<br>
+
+<form method="get" style="margin-top: 50px">
+    <input type="search" name="sear" id="inp">
+    <input type="submit" value="search" for="inp">
+    <h2 id="h">heure</h2>
+</form>
+
+<br>
+
+{% block content %}<p >le debut de index </p>{% endblock %}
+
+
+<script src="{% static 'js/main.js' %}"></script>
+
+</body>
+</html>

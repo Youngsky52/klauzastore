@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>S'inscrire </title>
+</head>
+<body>
+
+<center><h1>inscription</h1>
+<form method="POST">
+    {% csrf_token  %}
+    <p>
+        <label for="un">Nom utilisateur : </label>
+        <input type="text" name="username" id="un" required>
+        </p>
+    <p>
+        <label for="pw">Mot de pass : </label>
+        <input type="password" name="password" id="pw" required>
+    </p>
+    <p>
+        <label for="mail">Email :</label>
+        <input type="email" name="email" id="mail" required>
+    </p>
+    <button type="submit">S'inscrire</button>
+    <button type="button"><a href="{% url 'index' %}">retour</a></button>
+    <button>    <a style="text-decoration:none; color:red;" href="{% url 'signup' %}"> déja un compte </a></button>
+    <button type="reset"> supprimer </button>
+</form>
+</center>
+
+</body>
+</html>

@@ -1,0 +1,185 @@
+
+
+* {
+    margin-bottom: 100px;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    color: #000;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    list-style-type: none;
+    box-sizing: border-box;
+}
+ #loading{
+
+    background: #000 url("load2.gif");
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 30%;
+    opacity: 1;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+
+ }
+
+h2{
+
+font-size: 32px;
+    font-weight: 600;
+    color: #ff006a;
+}
+.img{
+
+} 
+ul li a:hover{
+color: #ff006a;
+
+}
+nav {
+  position:fixed;
+   background-color:#091821;
+  overflow:hidden;
+  width: 100%;
+}
+a{
+  color: gray;
+  text-decoration: none;
+}
+ul{
+    list-style:none;
+}
+
+header ul li a{
+    margin: 0 45px;
+    text-transform: capitalize;
+    font-size: 18px;
+    position: relative;
+    padding: 3px;
+    transition: all .4s ease;
+}
+ul li a:hover:before{
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 3px;
+    transition: all .4s ease;
+    width: 100%;
+    border-radius: 2px;
+    box-shadow: 0 0 44px red;
+    background:linear-gradient(135deg,rgba(255, 0, 0, 0.849),blue,pink);
+}
+nav ul li a::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: #000;
+}
+nav ul li {
+    display: inline-flex;
+}
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 12px;
+    padding: 23px;
+    box-shadow: 0 0 44px;
+}
+img{
+max-width:350px;
+height:450px;
+}
+#icon{
+  float:left;
+  color:red;
+  font-weight: bolder;
+  font-style:italic;
+  background-color: orange;
+}
+
+
+.tout{
+padding-top:88px;
+grid-column:gap;
+grid-column-gap:1em;
+display:grid;
+grid-template-columns: 50% 50% ;
+grid-row:gap;
+/*grid-template-rows:50%;*/
+grid-row-gap:1em;
+
+
+}
+
+.tout > div{
+  display:grid;
+  background-color: yellow;
+}
+
+
+.tout > div:nth-child(odd) {
+  
+  background-color:aqua;
+}
+ 
+.des{
+  width:180px;
+  height: 180px;
+  border-radius: 50%;
+  text-align: center;
+}
+.container_1 div{
+
+  border:1px solid black;
+
+ 
+}
+
+.container_1 {
+    margin-top:25px;
+    display:flex;
+    
+}
+
+
+.box_1 {
+  flex:1;
+
+}
+
+
+.box_2{
+    flex:1;
+    
+}
+.box_3{
+    flex:1;
+    
+}
+
+
+.box_4{
+
+    flex:1;
+
+    }
+
+
+input{
+    margin-top: 0px;
+    font-family: "Arial Black";
+    font-size: 15px;
+    border-bottom: 2px solid #ff006a;
+}
